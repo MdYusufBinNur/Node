@@ -15,6 +15,8 @@ mongoose.connect(db, { useNewUrlParser: true,  useUnifiedTopology: true })
 app.use(expressLayout);
 app.set('view engine', 'ejs');
 
+//BodyParser
+app.use(express.urlencoded({ extend: false}));
 
 //Routes
 app.use('/', require('./routes/index'));
